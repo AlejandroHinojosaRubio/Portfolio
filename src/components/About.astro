@@ -1,0 +1,91 @@
+---
+const techSkills: string[] = [
+  "TypeScript",
+  "React",
+  "GraphQL",
+  "NestJS",
+  "Node.js",
+  "Jest",
+  "SQL",
+  "noSQL",
+  "AWS",
+  "Docker",
+  "CI/CD",
+  "TDD",
+];
+
+const softSkills: string[] = [
+  "Communication",
+  "Team Player",
+  "Innovation",
+  "Versatility",
+  "Enthusiasm",
+  "Responsibility",
+  "Proactivity",
+  "Adaptability",
+  "Empathy",
+];
+---
+
+<section
+  id="about"
+  class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+>
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center fade-in">About Me</h2>
+
+      <div
+        class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden transition-colors duration-300"
+      >
+        <div class="md:flex">
+          <div class="p-6 md:p-8 fade-in text-lg">
+            <h3 class="text-xl font-semibold mb-4">Software Engineer</h3>
+
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              I am a Full-Stack Software Engineer with a deep passion for
+              technology and innovation. My journey in software development has
+              equipped me with experience in building dynamic user interfaces as
+              well as building robust back-end systems. I thrive in
+              multicultural environments, collaborating with diverse teams to
+              solve complex challenges.
+            </p>
+
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              With hands-on expertise in modern technologies like TypeScript,
+              React, GraphQL, and NestJS, I ensure that my solutions are
+              scalable, maintainable, and efficient. I continuously pursue new
+              challenges and opportunities to learn, driven by my curiosity and
+              proactive nature. Beyond coding, I enjoy exploring new ideas,
+              staying updated with industry trends, and engaging in creative
+              problem-solving.
+            </p>
+
+            <div class="mt-6">
+              <h4 class="font-semibold mb-3">Core Technical Skills</h4>
+              <div class="flex flex-wrap gap-2">
+                {
+                  techSkills.map((skill) => (
+                    <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  ))
+                }
+              </div>
+              <h4 class="font-semibold mb-3 mt-5">Soft Skills</h4>
+              <div class="flex flex-wrap gap-2">
+                {
+                  softSkills.map((skill) => (
+                    <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Projects from "../components/Projects.astro";
+import Certifications from "../components/Certifications.astro";
+---
+
+<Layout title="Alejandro Hinojosa Portfolio">
+  <Hero />
+  <About />
+  <Experience />
+  <Education />
+  <Certifications />
+  <Projects />
+
+  <script>
+    // Intersection Observer for fade-in animations
+    document.addEventListener("astro:page-load", () => {
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        }
+      );
+
+      fadeElements.forEach((element) => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</Layout>
