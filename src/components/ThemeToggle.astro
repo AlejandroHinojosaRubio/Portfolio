@@ -34,15 +34,13 @@
     ></path>
   </svg>
 </button>
-
 <script>
   document.addEventListener("astro:page-load", () => {
-    const themeToggle = document.getElementById("theme-toggle");
-    if (themeToggle) {
-      themeToggle.addEventListener("click", () => {
+    const toggles = document.querySelectorAll("#theme-toggle");
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
         const isDark = document.documentElement.classList.contains("dark");
         console.log({ isDark });
-
         if (isDark) {
           document.documentElement.classList.remove("dark");
           localStorage.setItem("theme", "light");
@@ -51,6 +49,6 @@
           localStorage.setItem("theme", "dark");
         }
       });
-    }
+    });
   });
 </script>
