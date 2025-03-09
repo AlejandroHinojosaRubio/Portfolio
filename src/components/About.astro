@@ -1,30 +1,5 @@
 ---
-const techSkills: string[] = [
-  "TypeScript",
-  "React",
-  "GraphQL",
-  "NestJS",
-  "Node.js",
-  "Jest",
-  "SQL",
-  "noSQL",
-  "AWS",
-  "Docker",
-  "CI/CD",
-  "TDD",
-];
-
-const softSkills: string[] = [
-  "Communication",
-  "Team Player",
-  "Innovation",
-  "Versatility",
-  "Enthusiasm",
-  "Responsibility",
-  "Proactivity",
-  "Adaptability",
-  "Empathy",
-];
+import { myResume } from "../data/resume";
 ---
 
 <section
@@ -65,7 +40,7 @@ const softSkills: string[] = [
               <h4 class="font-semibold mb-3">Core Technical Skills</h4>
               <div class="flex flex-wrap gap-2">
                 {
-                  techSkills.map((skill) => (
+                  myResume.techSkills.map((skill) => (
                     <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">
                       {skill}
                     </span>
@@ -75,7 +50,7 @@ const softSkills: string[] = [
               <h4 class="font-semibold mb-3 mt-5">Soft Skills</h4>
               <div class="flex flex-wrap gap-2">
                 {
-                  softSkills.map((skill) => (
+                  myResume.softSkills.map((skill) => (
                     <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">
                       {skill}
                     </span>
