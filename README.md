@@ -1,4 +1,4 @@
-# Portfolio of Alejandro Hinojosa
+# My porttfolio!
 
 Welcome to the repository for my personal portfolio website. I'm Alejandro Hinojosa, a Full-Stack Software Engineer, and this project showcases my work, experience, education, and inspirational ideas.
 
