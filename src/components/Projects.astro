@@ -1,7 +1,7 @@
 ---
+// TODO: Fix Image optimization to work in Vercel prod env
+/*
 import { Image } from "astro:assets";
-import { myResume } from "../data/resume";
-
 //https://docs.astro.build/en/guides/images
 //https://docs.astro.build/en/guides/images/#display-optimized-images-with-the-image--component
 //https://docs.astro.build/en/guides/images/#images-in-content-collections
@@ -15,6 +15,9 @@ function getImportedImage(imagePath: string): string {
   const fileName = imagePath.split("/").pop() as string;
   return images[`/src/images/${fileName}`].default;
 }
+*/
+
+import { myResume } from "../data/resume";
 ---
 
 <section
@@ -27,14 +30,14 @@ function getImportedImage(imagePath: string): string {
     <div class="flex flex-wrap justify-center gap-8">
       {
         myResume.sideProjects.map((project) => {
-          const importedImage: string = getImportedImage(project.image);
+          //const importedImage: string = getImportedImage(project.image);
 
           return (
             <div class="w-full md:w-1/2 lg:w-1/3">
               <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 fade-in">
                 <div class="relative">
-                  <Image
-                    src={importedImage}
+                  <img
+                    src={project.image}
                     alt={`${project.title} logo`}
                     class="w-60 h-48 object-cover mx-auto"
                     width={240}
