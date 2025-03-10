@@ -6,9 +6,12 @@ import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Projects from "../components/Projects.astro";
 import Certifications from "../components/Certifications.astro";
+
+const metadataDescription =
+  "+4 years of experience in software development. Building scalable software solutions with high quality code, always taking into account the product and its implicit requirements.";
 ---
 
-<Layout title="Alejandro Hinojosa Portfolio">
+<Layout title="Alejandro Hinojosa Portfolio" description={metadataDescription}>
   <Hero />
   <About />
   <Experience />
