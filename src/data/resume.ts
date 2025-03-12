@@ -141,8 +141,8 @@ const mySideProjects: SideProject[] = [
       title: "Telecommunications technical installer",
       company: "Euroworking Systems SL",
       location: "Palma",
-      from: "Mar 2019",
-      to: "Abr 2019",
+      from: "Jul 2018",
+      to: "Sep 2018",
       list: [
         "Router installation",
         "Installation of both electrical and data wiring",

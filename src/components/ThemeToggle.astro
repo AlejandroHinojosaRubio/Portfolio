@@ -40,7 +40,7 @@
     toggles.forEach((toggle) => {
       toggle.addEventListener("click", () => {
         const isDark = document.documentElement.classList.contains("dark");
-        console.log({ isDark });
+
         if (isDark) {
           document.documentElement.classList.remove("dark");
           localStorage.setItem("theme", "light");
