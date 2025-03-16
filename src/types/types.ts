@@ -13,7 +13,7 @@ export type Experience = {
     title: string;
     description: string;
     stack: string[];
-    url: string;
+    url?: string;
     image: string;
     isProd: boolean;
     source?: string;

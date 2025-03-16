@@ -14,7 +14,6 @@ const mySideProjects: SideProject[] = [
       description: "The portfolio you are visiting",
       stack: ["TailwindCSS", "Astro", "TypeScript", "Vercel"],
       source: "https://github.com/AlejandroHinojosaRubio/Portfolio",
-      url: "https://your-portfolio-domain.com",
       image: "/portfolio.webp",
       isProd: true,
     },
