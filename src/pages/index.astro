@@ -6,9 +6,12 @@ import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Projects from "../components/Projects.astro";
 import Certifications from "../components/Certifications.astro";
+
+const metadataDescription =
+  "+4 years of experience in software development. Building scalable software solutions with high quality code, always taking into account the product and its implicit requirements.";
 ---
 
-<Layout title="Alejandro Hinojosa Portfolio">
+<Layout title="Alejandro Hinojosa Portfolio" description={metadataDescription}>
   <Hero />
   <About />
   <Experience />
@@ -17,9 +20,19 @@ import Certifications from "../components/Certifications.astro";
   <Projects />
 
   <script>
+    import { handleTopPageScroll } from "../utils";
+
     // Intersection Observer for fade-in animations
     document.addEventListener("astro:page-load", () => {
+      const topScrollElements = document.querySelectorAll("#top-scroll");
       const fadeElements = document.querySelectorAll(".fade-in");
+
+      // Intead of refreshing the page, scroll it to the top
+      if (topScrollElements) {
+        topScrollElements.forEach((element) =>
+          element.addEventListener("click", handleTopPageScroll)
+        );
+      }
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -40,5 +53,10 @@ import Certifications from "../components/Certifications.astro";
         observer.observe(element);
       });
     });
+
+    console.log(
+      "%cHey! \nIf you're reading this, you're one of the cool ones 😉",
+      "color: #2d72d9; font-size: 16px; font-weight: bold; background: #f0f0f0; padding: 10px; border-radius: 4px;"
+    );
   </script>
 </Layout>
