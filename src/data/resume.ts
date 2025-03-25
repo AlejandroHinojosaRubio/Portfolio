@@ -158,15 +158,15 @@ const mySideProjects: SideProject[] = [
   
   const myEducation: Education[] = [
     {
-      title: "Computer Science (Online)",
+      title: "Computer Engineering (Online)",
       from: "2021",
       to: "Present",
       educationCentre: "UOC",
       description:
-        "An ongoing online degree that enhances both theoretical and practical aspects of computer science, complementing professional development.",
+        "An ongoing online degree that enhances both theoretical and practical aspects of computer engineering, complementing professional development.",
       keyAchivements: [
-        "Pursuing an online modular degree in Computer Science alongside professional activities.",
-        "Expanding knowledge and keeping up-to-date with advanced computer science concepts.",
+        "Pursuing an online modular degree in Computer Engineering alongside professional activities.",
+        "Expanding knowledge and keeping up-to-date with advanced computer engineering concepts.",
       ],
     },
     {
