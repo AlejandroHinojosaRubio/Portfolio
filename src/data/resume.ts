@@ -19,13 +19,26 @@ const mySideProjects: SideProject[] = [
     },
   ];
   
-  const myExperience: Experience[] = [
-    {
-      title: "Software Engineer II",
-      company: "Restaurant Brands International (RBI)",
-      location: "Remote",
-      from: "Dec 2023",
-      to: "Mar 2025",
+const myExperience: Experience[] = [
+  {
+    title: "Full-stack Developer",
+    company: "Harbiz",
+    location: "Madrid",
+    from: "Apr 2025",
+    to: "Present",
+    list: [
+      "Develop new product features for Harbiz's platform using modern web technologies.",
+      "Implement server-side logic and APIs to support customer requirements.",
+      "Collaborate with cross-functional teams to deliver scalable solutions.",
+      "Maintain CI/CD processes and monitor production systems.",
+    ],
+  },
+  {
+    title: "Software Engineer II",
+    company: "Restaurant Brands International (RBI)",
+    location: "Remote",
+    from: "Dec 2023",
+    to: "Apr 2025",
       list: [
         "Develop information systems by designing, developing, and installing software solutions.",
         "Determine operational viability by evaluating the analysis, problem definition, requirements, solution development, and proposed solutions.",
