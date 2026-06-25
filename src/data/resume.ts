@@ -1,4 +1,11 @@
-import { SideProject, Experience, Education, Certification, MyResume } from "../types";
+import {
+  SideProject,
+  Experience,
+  Education,
+  Certification,
+  LatestPost,
+  MyResume,
+} from "../types";
 
 const mySideProjects: SideProject[] = [
     {
@@ -18,36 +25,74 @@ const mySideProjects: SideProject[] = [
       isProd: true,
     },
   ];
+
+const latestPosts: LatestPost[] = [
+  {
+    title: "AI-assisted development should buy better engineering time",
+    description:
+      "A reflection on AWS's AI-generated code discussion: AI should create more room for architecture, planning, review and maintainable engineering decisions, not only accelerate output.",
+    date: "Jun 2026",
+    url: "https://www.linkedin.com/posts/alexhinojosarubio_amazon-web-services-aws-recently-posted-share-7470830676028661761-dnKN/",
+    tags: ["AI", "Software Engineering", "Architecture", "AWS"],
+  },
+  {
+    title: "Trackmania: real-time ship tracking with Go and Kafka",
+    description:
+      "A first overview of a learning project for real-time ship monitoring, built to explore Go, Kafka and high-throughput event-driven systems.",
+    date: "Mar 2025",
+    url: "https://www.linkedin.com/posts/alexhinojosarubio_im-super-happy-to-share-a-first-overview-share-7308552484094971904-BxG5/",
+    tags: ["Go", "Kafka", "Real-time Systems", "Product Demo"],
+  },
+];
   
 const myExperience: Experience[] = [
   {
     title: "Full-stack Developer",
     company: "Harbiz",
-    location: "Madrid",
+    location: "Madrid / Remote",
     from: "Apr 2025",
     to: "Present",
     list: [
-      "Develop new product features for Harbiz's platform using modern web technologies.",
-      "Implement server-side logic and APIs to support customer requirements.",
-      "Collaborate with cross-functional teams to deliver scalable solutions.",
-      "Maintain CI/CD processes and monitor production systems.",
+      "Build and ship full-stack product features across a TypeScript monorepo, working with React, React Native, Meteor, Node.js/Express and shared packages.",
+      "Develop AI-powered product features, including automated generation of personalized training and nutrition programs using LLM models, with a focus on data consistency, reliability and user experience.",
+      "Designed and prototyped the architecture for an agentic AI service using real-time streaming with Server-Sent Events and AI SDK.",
+      "Work on Stripe payment and subscription flows, including payment eligibility logic, alternative payment methods and reusable shared configuration across the platform.",
+      "Contribute to the migration of legacy Meteor/Blaze interfaces to modern React, while improving reusable components, design-system foundations, SCSS/BEM structure and frontend maintainability.",
+      "Improve engineering quality through pragmatic testing, production observability and custom internal AI tools.",
+    ],
+    techStack: [
+      "TypeScript",
+      "React",
+      "React Native",
+      "Meteor",
+      "Node.js",
+      "Express",
+      "Server-Sent Events",
+      "Vercel AI SDK",
+    ],
+    other: [
+      "SaaS",
+      "LLMs",
+      "Agentic AI",
+      "Stripe",
+      "Observability",
+      "Testing",
+      "Monorepo",
+      "Blaze to React migration",
     ],
   },
   {
     title: "Software Engineer II",
     company: "Restaurant Brands International (RBI)",
-    location: "Remote",
+    location: "Switzerland / Remote",
     from: "Dec 2023",
     to: "Apr 2025",
       list: [
-        "Develop information systems by designing, developing, and installing software solutions.",
-        "Determine operational viability by evaluating the analysis, problem definition, requirements, solution development, and proposed solutions.",
-        "Develop software solutions by studying information needs, user queries, and studying system flow, data usage, and work processes.",
-        "Investigate problem areas.",
-        "Follow the software development life cycle.",
-        "Technical discussions and troubleshooting with 3rd party vendors.",
-        "Integrate advanced observability measures by embedding real-time monitoring, logging, and alerting frameworks to drive proactive performance optimization and rapid issue resolution.",
-        "Develop using agile methodologies and ceremonies.",
+        "Built and maintained full-stack applications and backend services for international brand platforms.",
+        "Designed and implemented integrations with external vendors, including data validation, error handling and monitoring.",
+        "Improved observability through real-time monitoring, logging and alerting practices for production systems.",
+        "Collaborated with distributed engineering teams across frontend, backend, product and external partners.",
+        "Participated in requirements analysis, technical discussions and architecture decisions for scalable software solutions.",
       ],
       techStack: [
         "TypeScript",
@@ -75,10 +120,14 @@ const myExperience: Experience[] = [
     {
       title: "Software Engineer I",
       company: "Restaurant Brands International (RBI)",
-      location: "Remote",
+      location: "Switzerland / Remote",
       from: "Sept 2022",
       to: "Dec 2023",
-      list: ["See above"],
+      list: [
+        "Contributed to full-stack applications and backend services for international brand platforms.",
+        "Supported frontend and backend delivery across integrations, monitoring and production issue investigation.",
+        "Worked with distributed engineering teams while growing into broader ownership before promotion to Software Engineer II.",
+      ],
     },
     {
       title: "Full-Stack Junior Software Developer",
@@ -265,16 +314,28 @@ const myExperience: Experience[] = [
   const techSkills: string[] = [
     "TypeScript",
     "React",
-    "GraphQL",
-    "NestJS",
     "Node.js",
-    "Jest",
-    "SQL",
-    "noSQL",
+    "NestJS",
+    "React Native",
+    "GraphQL",
+    "REST APIs",
     "AWS",
+    "Google Cloud",
     "Docker",
     "CI/CD",
-    "TDD",
+    "Serverless",
+    "Vercel",
+    "SaaS",
+    "Stripe",
+    "Observability",
+    "Datadog",
+    "Testing",
+    "Playwright",
+    "Jest",
+    "LLMs",
+    "AI SDK",
+    "Agentic AI",
+    "AI-powered product features",
   ];
   
   const softSkills: string[] = [
@@ -291,10 +352,10 @@ const myExperience: Experience[] = [
 
   export const myResume: MyResume = {
     sideProjects: mySideProjects,
+    latestPosts,
     experience: myExperience,
     education: myEducation,
     certifications: myCertifications,
-    techSkills,
-    softSkills,
-  };
-  
+  techSkills,
+  softSkills,
+};
